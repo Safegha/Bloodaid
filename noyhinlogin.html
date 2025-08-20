@@ -1,0 +1,199 @@
+
+<!----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<link rel="stylesheet" href="login.css">
+<body>
+   
+    <div class="login-container">
+    <h1 class="log-in">Log in</h1>
+    <p style="color: black;">please fill the information below to login</p>
+    <form action="" method="post" class="login-form">
+        <label for="username or email">username or email</label>
+        <input type="text" name="username or email" id="username or email" placeholder="username or email"><br>
+        <label for="password" style="margin: 5px;">password</label>
+        <input type="text" name="password" id="password" placeholder="password">
+ <label for="forgot password" style="margin: 5px;">forgot password</label>
+        <input type="checkbox" name="forgot password">
+        <button type="submit" id="submit">login</button>
+        
+    </form>
+<p style="color: brown;">Don't have an account ?<a href="Register">Register</a></p>
+</div>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="request.css">
+<body>
+     <header>
+        <div class="Welcome">
+            <p>Welcome to our Bloodaid site</p>
+        </div>
+<!--navbar-->
+<nav>
+    <a href="#"><span class="logo1">BLOOD</span> <SPAN class="logo2">AID</SPAN></a>
+    
+    
+    <ul>
+        <li class="nav_list"><a href="bloodiad.html">Home</a></li><br>
+        <li class="nav_list "><a href="#">About us</a></li><br>
+        <li class="nav_list "><a href="Request.html">Request blood</a></li><br>
+       
+    </ul>
+
+    <div class="register-dropdown">
+    <button class="register-btn">Register Now &#9662;</button>
+    <div class="register-dropdown-content">
+        <a href="donor.html"> Donor</a>           
+        <a href="">Recipient</a>
+    </div>
+</div>
+   
+    
+    <div class="login">
+        <a href="bloodlogin.html">login</a>
+
+    </div>
+</nav>
+
+    <h1 class="myheading">Blood Request</h1> 
+    <div class="Request">
+    
+    <form action="" method="post" class="form_request" id="bloodForm">
+        <p style="font-size: large;">pls fill the following information</p>
+        <label for="Fullname">Fullname</label><br>
+        <input type="Fullname" id="Fullname" name="Fullname" placeholder="Fullname"><br>
+        <span id="FullnameError" class="error"></span>
+    <label for="location">location</label><br>
+    <input type="location" id="location" name="location" placeholder="location"><br>
+    <span id="locationError" class="error"></span>
+<label for="email">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="email"><br>
+<span id="emailError" class="error"></span>
+<label for="phone number">phone number</label><br>
+    <input type="phone number" id="phonenumber" name="phonenumber" placeholder="phone number"><br>
+<span id="phonenumberError" class="error"></span>
+    <label for="blood group">blood group</label><br>
+    <select name="bloodgroup" id="bloodgroup">
+        <option value="A">A+</option>
+         <option value="A">A-</option>
+          <option value="B">B+</option>
+           <option value="B">B-</option>
+            <option value="AB">AB+</option>
+             <option value="AB">AB-</option>
+              <option value="O">O+</option>
+               <option value="O">O-</option>
+    </select><br>
+    <span id="bloodGroupError" class="error"></span>
+    <label for="Gender">Gender</label><br>
+      
+        <label for="male">Male</label>
+        <input type="radio" name="male" id="male">
+        <label for="female">female</label>
+        <input type="radio" name="female" id="female">
+    <span id="genderError" class="error"></span>
+
+    <button class="submit">submit</button>
+</div>
+    </form>
+<footer>
+         <div class="copy_right">
+        <p> &copy copyright,2025;<span class="logo1">BLOOD</span> <SPAN class="logo2">AID</span></span>.</p>
+         </div>
+        </footer>
+        <script>
+           
+
+    const form = document.getElementById('bloodForm');
+
+form.addEventListener('submit', (e) => {
+    let isValid = true;
+
+    // Check full name
+    const Fullname = document.getElementById('Fullname');
+    const FullnameError = document.getElementById('FullnameError');
+    if (!Fullname.value.trim()) {
+        FullnameError.innerHTML = 'Full name is required.';
+        isValid = false;
+    } else {
+        FullnameError.innerHTML = '';
+    }
+
+    // Check location
+    const location = document.getElementById('location');
+    const locationError = document.getElementById('locationError');
+    if (!location.value.trim()) {
+        locationError.innerHTML = 'Location is required.';
+        isValid = false;
+    } else {
+        locationError.innerHTML = '';
+    }
+
+    // Check email
+    const email = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+    if (!email.value.trim()) {
+        emailError.innerHTML = 'Email is required.';
+        isValid = false;
+    } else {
+        emailError.innerHTML = '';
+    }
+
+    // Check phone number
+    const phonenumber = document.getElementById('phonenumber');
+    const phonenumberError = document.getElementById('phonenumberError');
+    if (!phonenumber.value.trim()) {
+        phonenumberError.innerHTML = 'Phone number is required.';
+        isValid = false;
+    } else {
+        phonenumberError.innerHTML = '';
+    }
+
+    // Check blood group
+    const bloodGroup = document.getElementById('bloodGroup');
+    const bloodGroupError = document.getElementById('bloodGroupError');
+    if (!bloodGroup.value) {
+        bloodGroupError.innerHTML = 'Blood group is required.';
+        isValid = false;
+    } else {
+        bloodGroupError.innerHTML = '';
+    }
+
+    // Check gender
+    const gender = document.getElementsByName('gender');
+    const genderError = document.getElementById('genderError');
+    let selected = false;
+    for (let i = 0; i < gender.length; i);
+})
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

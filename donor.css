@@ -1,0 +1,176 @@
+  body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgb(221, 174, 174);
+      color: #8a0303;
+      font-size: x-large;
+    }.Welcome{
+    padding: 1px;
+    background-color: #bb2c2c;
+    text-align: left;
+    align-items: flex-start;
+    color: white;
+}
+
+
+.logo1 {
+    color: #DD2424;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.logo2 {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+background-color: #FFFF;
+}
+nav a {
+    text-decoration: none;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul a {
+    color: black;
+    font-weight: 300;
+}
+
+
+.login{
+    display: flex;
+    padding: 10px 20px;
+    background-color: #572121;
+    color: white;
+    font-weight: bold;
+    margin: 0%;
+    border-radius: 5%;
+}
+
+.login a{
+    color: white;
+    font-weight: bold;
+}
+
+.register-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.register-btn {
+    background-color: #572121;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.register-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.register-dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.register-dropdown:hover .register-dropdown-content {
+    display: block;
+}
+
+.register-dropdown:hover .register-btn {
+    background-color:rgb(221, 174, 174);
+    
+}
+
+
+   
+
+    /* --- FORM SECTION --- */
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+      color: #8a0303;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      background-color: #fff;
+      border: 2px solid #8a0303;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(138, 3, 3, 0.1);
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #8a0303;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+      color: #8a0303;
+    }
+
+    button {
+      background-color: #8a0303;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #a31010;
+    }
+
+    footer {
+      background-color: #8a0303;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 14px;
+    }

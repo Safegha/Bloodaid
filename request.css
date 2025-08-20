@@ -1,0 +1,244 @@
+body{
+    padding: 0;
+    background-color:  rgb(221, 174, 174);
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    
+    
+}
+body, header, main, footer {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ 
+}
+.Welcome{
+    padding: 1px;
+    background-color: #bb2c2c;
+    text-align: left;
+    align-items: center;
+
+}
+
+
+.logo1 {
+    color: #DD2424;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.logo2 {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+background-color: #FFFF;
+}
+nav a {
+    text-decoration: none;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul a {
+    color: black;
+    font-weight: 300;
+}
+
+
+.login{
+    display: flex;
+    padding: 10px 20px;
+    background-color: #572121;
+    color: white;
+    font-weight: bold;
+    margin: 0%;
+    border-radius: 5%;
+}
+
+.login a{
+    color: white;
+    font-weight: bold;
+}
+.register-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.register-btn {
+    background-color: #572121;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.register-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.register-dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.register-dropdown:hover .register-dropdown-content {
+    display: block;
+}
+
+.register-dropdown:hover .register-btn {
+    background-color:rgb(221, 174, 174);
+    
+}
+
+
+.myheading{
+    text-align: center;
+    text-decoration: solid;
+    align-items: start;
+    color: rgb(226, 114, 114);
+    font-style: blod;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+.form_request{
+    align-items: center;
+    justify-content: center;
+    background-color:#fff;
+    width: 500px;
+    height: 550px;
+    padding: 20px;
+     margin-bottom: 5px;
+    line-height: 2;
+    gap: 20px;
+    font-size: medium;
+    
+}
+  .form_request input{
+
+   
+    padding: 10px 150px;
+    border: 2px solid rgb(105, 5, 10);
+    border-radius: 9px;
+    font-size: 16px;
+    background: #fff; 
+}
+    
+    
+form {
+      max-width: 500px;
+      margin: 30px auto;
+      background-color: #750505;
+      border: 2px solid #030303;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(248, 246, 246, 0.1);
+      font-size: large;
+    }
+      
+     button {
+      background-color: rgb(105, 5, 10);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #8a0303;
+    }
+    
+    footer {
+      background-color: #8a0303;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    
+/*
+
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #8a0303;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+      color: #8a0303;
+    }
+
+    button {
+      background-color: #8a0303;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #a31010;
+    }
+
+    footer {
+      background-color: #8a0303;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+      */
+
+
+
