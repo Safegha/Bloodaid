@@ -51,40 +51,6 @@ $_SESSION['user_id'] =$row2['Donor_id'];
 
 
 
-/*
-
-
-
-
-error_reporting(E_ALL);
-ini_set('display_errors',1);
-session_start();
-require 'db.php';
-
-// Only run login code if form submitted
-if (isset($_POST['login'])) {
-$email =$_POST['email'];
-        $password=$_POST['password'];
-
-
-    $sql= "SELECT Recipient_id,Recipient_fullname,Recipient_pwd FROM recipient WHERE Recipient_email='$email' AND Recipient_pwd='$password'";
-$result =$conn->query($sql);
-
- if ($result && $result->num_rows==1){
-    $row = $result->fetch_assoc();
-
-
-$_SESSION['user_id'] =$row['Recipient_id'];
-            $_SESSION['user_name'] =$row['Recipient_fullname'];
-
-        
-        header("Location: request.php");
-        exit();
-     }else {
-        $error = "Invalid username or password";
-    }
-}
-*/
 
 ?>
 

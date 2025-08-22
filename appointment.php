@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
         $phone_number=$_POST['phone_number'];
 
 
-$sql= "INSERT INTO appointment(Donor_id,Preferred_Time,Preferred_Date,Location,phone_number	) VALUES('$donor_id','$time','$date','$location','$phone_number')";
+$sql= "INSERT INTO appointment(Donor_id,Prefferred_Time,Prefferred_Date,Location,phone_number	) VALUES('$donor_id','$time','$date','$location','$phone_number')";
 
 
    
