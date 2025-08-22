@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,29 +16,28 @@
         </div>
 <!--navbar-->
 <nav>
-         <img src="c:\Users\PC\Downloads\logo2.png" alt="" class="logo-image" width="50" height="50">
+         <img src="images/logo2.png" alt="" class="logo-image" width="50" height="50">
 
     <a href="#"><span class="logo1">BLOOD</span> <SPAN class="logo2">AID</SPAN></a>
     
     
     <ul>
-        <li class="nav_list"><a href="home.html">Home</a></li><br>
-        <li class="nav_list "><a href="about.html">About us</a></li><br>
-        <li class="nav_list "><a href="Request.html">Request blood</a></li><br>
-       
+        <li class="nav_list"><a href="home.php">Home</a></li><br>
+        <li class="nav_list "><a href="about.php">About us</a></li><br>
+        <li class="nav_list "><a href="request.php">Request blood</a></li><br>
     </ul>
 
     <div class="register-dropdown">
     <button class="register-btn">Register Now &#9662;</button>
     <div class="register-dropdown-content">
-        <a href="donor.html"> Donor</a>           
-        <a href="recipient.html">Recipient</a>
+        <a href="donor.php"> Donor</a>           
+        <a href="recipient.php">Recipient</a>
     </div>
 </div>
    
     
     <div class="login">
-        <a href="bloodlogin.html">login</a>
+        <a href="login.php">login</a>
 
     </div>
 </nav>
@@ -49,7 +50,7 @@
          supporting both personal needs and medical demand.</p>
 </div>
 <div class="book">
-    <button ><a href="appionment.html">BOOK AN APPOINMENT</a></button>
+    <button ><a href="appiontment.php">BOOK AN APPOINMENT</a></button>
 </div>
 </div>
     </header>
@@ -63,18 +64,18 @@
          </div>
         <div class="service-list">
             <div class="service">
-                <img src="c:\Users\PC\Pictures\RESGIS.jpg" alt="" width="450">
+                <img src="images/RESGIS.jpg" alt="" width="450">
                 <p class="services-numder1"><h3><span class="service1">Registretion</span></h3> you need to complete a very simple registration form. which contains all required contact information to enter the donation and reception process</p>
 
             </div>
             
             <div class="service">
-                <img src="c:\Users\PC\Pictures\screen2.jpg" alt="" width="450" height="299">
+                <img src="images/screen2.jpg" alt="" width="450" height="299">
               <p class="services-numder2"><h3><span class="service1">Screening</span></h3> A drop of blood will be taken from your finger for a simple test too ensure that your blood irons levels are proper enough for donation process</p>
 
             </div>
             <div class="service">
-                <img src="c:\Users\PC\Pictures\DONATION.jpeg" alt="" width="450">
+                <img src="images/DONATION.jpeg" alt="" width="450">
                                 <p class="services-numder3"><h3><span class="service1">Donation</span></h3> After ensuring and passed screenimg test successfully, you will be directed to a donor bed for donation.it will take only 6-10 mins </p>
                 
         </div>

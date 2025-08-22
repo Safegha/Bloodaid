@@ -13,27 +13,27 @@
         </div>
 <!--navbar-->
 <nav>
-             <img src="c:\Users\PC\Downloads\logo2.png" alt="" class="logo-image" width="50" height="50">
+             <img src="images/logo2.png" alt="" class="logo-image" width="50" height="50">
 
     <a href="#"><span class="logo1">BLOOD</span> <SPAN class="logo2">AID</SPAN></a>
     
     
     <ul>
-        <li class="nav_list"><a href="home.html">Home</a></li><br>
-        <li class="nav_list "><a href="about.html">About us</a></li><br>
-        <li class="nav_list "><a href="request.html"> Request blood</a></li><br>
+        <li class="nav_list"><a href="home.php">Home</a></li><br>
+        <li class="nav_list "><a href="about.php">About us</a></li><br>
+        <li class="nav_list "><a href="request.php"> Request blood</a></li><br>
        
     </ul>
 
     <div class="register-dropdown">
     <button class="register-btn">Register Now &#9662;</button>
     <div class="register-dropdown-content">
-        <a href="donor.html"> Donor</a>           
-        <a href="recipient.html">Recipient</a>
+        <a href="donor.php"> Donor</a>           
+        <a href="recipient.php">Recipient</a>
     </div>
 </div>
 <div class="login">
-    <a href="login.html">login</a>
+    <a href="login.php">login</a>
 </div>
 </nav>
 <!--banner-->
@@ -45,7 +45,7 @@
         </div>
        <u> <h3 class="do">what we do</h3></u>
         <div class="container">
-     <img src="c:\Users\PC\Pictures\donor.jpg" alt="">
+     <img src="images/donor.jpg" alt="">
      <div class="text">
      <ol>
         <li>Organizes blood donation events</li><br>
@@ -71,7 +71,7 @@
      </ol>
      </div>
      <div>
-     <img src="c:\Users\PC\Pictures\event.jpg" alt="" class="image" >
+     <img src="images/event.jpg" alt="" class="image" >
      </div>
      <u><h3 class="our-vision">Our Vision</h3></u>
      <p class="s">To build a community where no life is lost due to blood shortage</p>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Donor</title>
 </head>
 <link rel="stylesheet" href="donor.css">
 <body>
@@ -13,29 +13,29 @@
         </div>
 <!--navbar-->
 <nav>
-             <img src="c:\Users\PC\Downloads\logo2.png" alt="" class="logo-image" width="50" height="50">
+             <img src="images/logo2.png" alt="" class="logo-image" width="50" height="50">
 
     <a href="#"><span class="logo1">BLOOD</span> <SPAN class="logo2">AID</SPAN></a>
     
     
     <ul>
-        <li class="nav_list"><a href="home.html">Home</a></li><br>
-        <li class="nav_list "><a href="about.html">About us</a></li><br>
-        <li class="nav_list "><a href="request.html">Request blood</a></li><br>
+        <li class="nav_list"><a href="home.php">Home</a></li><br>
+        <li class="nav_list "><a href="about.php">About us</a></li><br>
+        <li class="nav_list "><a href="request.php">Request blood</a></li><br>
        
     </ul>
 
     <div class="register-dropdown">
     <button class="register-btn">Register Now &#9662;</button>
     <div class="register-dropdown-content">
-        <a href="donor.html"> Donor</a>           
-        <a href="recipient.html">Recipient</a>
+        <a href="donor.php"> Donor</a>           
+        <a href="recipient.php">Recipient</a>
     </div>
 </div>
    
     
     <div class="login">
-        <a href="bloodlogin.html">login</a>
+        <a href="login.php">login</a>
 
     </div>
 </nav>

@@ -1,36 +1,48 @@
-
 <?php
+
+
+
 session_start();
 require 'db.php';
-
-if(isset($_POST['submit'])){
-header("location: login.php");
-exit();
+if (!isset($_SESSION['user_id'])) {
+  echo "<script>alert('Please kindly register and log in first before you can access this page.');</script>";
+  // You can also use header to redirect to the login page
+  // header('Location: login.php');
+  exit();
 }
-$message ="";
+
+
+
 if(isset($_POST['submit'])){
     $recipient_id=$_SESSION['user_id'];
     $blood_type=$_POST['blood_type'];
     $request_date=$_POST['request_date'];
-  $id = $recipient_id.'+123';
+    $quantity=$_POST['quantity'];
 
-$sql= "INSERT INTO bloodrequest(Bloodrequest_id,Request_id,Bloodrequest_bloodtype,Request_date	) VALUES(''$id',$recipient_id','$blood_type','$request_date')";
+$sql= "INSERT INTO bloodrequest(Recipient_id,Bloodrequest_bloodtype,Request_date,quantity) VALUES('$recipient_id','$blood_type','$request_date','$quantity')";
 
- if ($conn->query($sql)===TRUE){
-    echo"success!";
-}else{
-    echo"failed: " . $conn->error;
+
+   
+
+    if (mysqli_query($conn, $sql)) {
+        echo "Request submitted successfully!";
+    } else {
+        $error = "Error submitting request!";
+    }
 }
-$conn->close();
-}
+
 ?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>request</title>
 </head>
 <link rel="stylesheet" href="request.css">
 <body>
@@ -40,50 +52,52 @@ $conn->close();
         </div>
 <!--navbar-->
 <nav>
-             <img src="c:\Users\PC\Downloads\logo2.png" alt="" class="logo-image" width="50" height="50">
+             <img src="images/logo2.png" alt="" class="logo-image" width="50" height="50">
 
     <a href="#"><span class="logo1">BLOOD</span> <SPAN class="logo2">AID</SPAN></a>
     
     
     <ul>
-        <li class="nav_list"><a href="home.html">Home</a></li><br>
-        <li class="nav_list "><a href="about.html">About us</a></li><br>
-        <li class="nav_list "><a href="request.html">Request blood</a></li><br>
-       
+        <li class="nav_list"><a href="home.php">Home</a></li><br>
+        <li class="nav_list "><a href="about.php">About us</a></li><br>
+        <li class="nav_list "><a href="request.php">Request blood</a></li><br>
+                  <li class="nav_list"><a href="logout.php">logout</a></li>
+
     </ul>
 
     <div class="register-dropdown">
     <button class="register-btn">Register Now &#9662;</button>
     <div class="register-dropdown-content">
-        <a href="donor.html"> Donor</a>           
-        <a href="recipient.html">Recipient</a>
+        <a href="donor.php"> Donor</a>           
+        <a href="recipient.php">Recipient</a>
     </div>
 </div>
    
     
     <div class="login">
-        <a href="login.html">login</a>
+        <a href="login.php">login</a>
 
     </div>
 </nav>
 
+
     <h1 class="myheading">Blood Request</h1> 
+
     <div class="Request">
     
-    <form action="" method="POST" class="form_request" id="bloodForm">
+    <form action="request.php" method="POST" class="form_request" id="bloodForm">
         <p style="font-size: large;">please fill the following information</p>
-        <label for="Fullname">Fullname</label><br>
-        <input type="Fullname" id="Fullname" name="Fullname" placeholder="Fullname"><br>
-    <label for="location">location</label><br>
-    <input type="location" id="location" name="location" placeholder="location"><br>
-<label for="email">Email</label><br>
-    <input type="email" id="email" name="email" placeholder="email"><br>
+  <label for="quantity">quantity</label>
 
-<label for="phone number">phone number</label><br>
-    <input type="phone number" id="phone number" name="phone number" placeholder="phone number"><br>
+    <input type="text" name="quantity" id="quantity"><br><br>
+          <span id="quantityError" class="error"></span>
 
-    <label for="blood group">blood group</label><br>
-    <select name="blood_type" id="">
+    <label for="">request date</label>
+    <input type="date" name="request_date"  id="request_date"><br><br>
+          <span id="request_dateError" class="error"></span>
+
+    <label for="blood group">blood group</label>
+    <select name="blood_type" id="bloodGroupe">
         <option value="A">A+</option>
          <option value="A">A-</option>
           <option value="B">B+</option>
@@ -92,75 +106,70 @@ $conn->close();
              <option value="AB">AB-</option>
               <option value="O">O+</option>
                <option value="O">O-</option>
-    </select><br>
-    <label for="Gender">Gender</label><br>
-      
-        <label for="male">Male</label>
-        <input type="radio" name="male" id="male">
-        <label for="female">female</label>
-        <input type="radio" name="female" id="female">
-    <label for="">request date</label>
-    <input type="date" name="request_date">
+    </select><br><br>
+       <span id="bloodGroupError" class="error"></span>
+
+   
     <button class="submit" name="submit">submit</button>
+    
 
 </div>
     </form>
+
 <footer>
          <div class="copy_right">
         <p> &copy copyright,2025;<span class="logo1">BLOOD</span> <SPAN class="logo2">AID</span></span>.</p>
          </div>
     </footer>
-   <?php
-   if($message!= "") echo "<p>$message</p>";
-   ?>
+   
+<script>
+           
 
-<!----    
-</form>
+    const form = document.getElementById('bloodForm');
 
-     <form action="" method="post">
+form.addEventListener('submit', (e) => {
+    let isValid = true;
 
-    <label for="Fullname">Full Name</label>
-    <input type="text" name="Fullname" required="">
-    <label for="Location">Location</label>
-    <input type="text" name="Location" required="">
+    // Check full name
+    const quantity = document.getElementById('quantity');
+    const quantityError = document.getElementById('quantityError');
+    if (!Fullname.value.trim()) {
+        FullnameError.innerHTML = 'quantity is required.';
+        isValid = false;
+    } else {
+        quantityError.innerHTML = '';
+    }
 
+   
+
+    // Check email
+    const request_date = document.getElementById('request_date');
+    const request_dateError = document.getElementById('request_dateError');
+    if (!email.value.trim()) {
+        emailError.innerHTML = 'request_date is required.';
+        isValid = false;
+    } else {
+        request_dateError.innerHTML = '';
+ 
+
+    // Check blood group
+    const bloodGroup = document.getElementById('bloodGroup');
+    const bloodGroupError = document.getElementById('bloodGroupError');
+    if (!bloodGroup.value) {
+        bloodGroupError.innerHTML = 'Blood group is required.';
+        isValid = false;
+    } else {
+        bloodGroupError.innerHTML = '';
+    }
+    }
     
+})
 
-    <label>Password</label>
-    <input type="password" name="recipient_pwd" required="">
 
-    <label>Blood Type</label>
-    <select name="recipient_bloodtype" required="">
-      <option value="">--Select--</option>
-      <option value="A+">A+</option>
-      <option value="A-">A-</option>
-      <option value="B+">B+</option>
-      <option value="B-">B-</option>
-      <option value="AB+">AB+</option>
-      <option value="AB-">AB-</option>
-      <option value="O+">O+</option>
-      <option value="O-">O-</option>
-    </select>
-    <label>Gender</label>
-    <select name="recipient_gender" required="">
-      <option value="">--Select--</option>
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-      <option value="Other">Other</option>
-    </select>
 
-    <label>Email</label>
-    <input type="email" name="recipient_email" required="">
 
-    <label>Contact Number</label>
-    <input type="tel" name="recipient_contact" required="">
+</script>
 
-    <label>Date of Birth</label>
-    <input type="date" name="date_of_birth" required="">
 
-    <button type="submit">submit request</button>
-  </form>
-    </div>
--->
 </body>
 </html>
