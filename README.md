@@ -24,7 +24,7 @@ It provides a platform where donors and recipients can register, request blood, 
 
 
   How to Install & Setup
-
+you can either copy followind the steps below;
 To run this project locally:
 1.Install XAMPP  
 2.Copy the project folder (BloodAid) into the htdocs directory inside your XAMPP installation.   
@@ -35,8 +35,17 @@ To run this project locally:
 7. Update the db.php file (or equivalent config file) with your database name, username, and password.  
 8. In your browser, open:http://localhost/BloodAid/
 
-
- Pages Overview/Usage
+ OR clone the repositry
+1. open your terminal.
+2. run a command to clone the repositry (git clone ten paste the URL link).
+   to set up your database
+   1. start XAMPP and start apache and MySQL
+   2. open phpMyAdmin
+   3. create a new database
+   4. import the SQL file located the projet 
+   
+ 
+Pages Overview/Usage
 
 -Home Page: Overview of the website and platform  
 -About page: overview of what we do and our mission
