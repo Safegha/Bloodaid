@@ -13,17 +13,16 @@
         </div>
 <!--navbar-->
 <nav>
-             <img src="images/logo2.png" alt="" class="logo-image" width="50" height="50">
+    <div class="navbar">
+         <img src="images/logo2.png" alt="" class="logo-image" width="50" height="50">
 
     <a href="#"><span class="logo1">BLOOD</span> <SPAN class="logo2">AID</SPAN></a>
     
     
-    <ul>
+    <ul class="nav-links">
         <li class="nav_list"><a href="home.php">Home</a></li><br>
         <li class="nav_list "><a href="about.php">About us</a></li><br>
-        <li class="nav_list "><a href="request.php"> Request blood</a></li><br>
-       
-    </ul>
+        <li class="nav_list "><a href="request.php">Request blood</a></li><br>
 
     <div class="register-dropdown">
     <button class="register-btn">Register Now &#9662;</button>
@@ -32,10 +31,17 @@
         <a href="recipient.php">Recipient</a>
     </div>
 </div>
-<div class="login">
-    <a href="login.php">login</a>
-</div>
+   
+    
+    <div class="login">
+        <a href="login.php">login</a>
+    
+
+    </div>
+    </div>
+    </ul>
 </nav>
+
 <!--banner-->
 <div class="banner">
     <h2 class="about">About Us</h2>
@@ -43,6 +49,7 @@
         This initiative is taken by a team of first year Computer Engineering students
         </p>
         </div>
+</header>
        <u> <h3 class="do">what we do</h3></u>
         <div class="container">
      <img src="images/donor.jpg" alt="">
@@ -75,10 +82,18 @@
      </div>
      <u><h3 class="our-vision">Our Vision</h3></u>
      <p class="s">To build a community where no life is lost due to blood shortage</p>
-<footer>
+ <footer>
          <div class="copy_right">
-        <p> &copy copyright,2025;<span class="log">BLOOD</span> <SPAN class="logo2">AID</span></span>.</p>
+        <p> &copy copyright,2025;<span class="logo1">BLOOD</span> <SPAN class="logo2">AID</span></span>.</p>
          </div>
-</footer>
+    </footer>
+
+
+
+
+
+    
+
+
 </body>
 </html>

@@ -1,15 +1,10 @@
-header, main, footer {
+
+body, header, main, footer {
  padding: 0;
  margin: 0;
  box-sizing: border-box;
- font-size: x-large;
+ font-size: larger;
  
-}
-body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-   
 }
 .Welcome{
     padding: 1px;
@@ -17,7 +12,13 @@ body{
     text-align: left;
     align-items: flex-start;
 }
-
+ @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
 
 .logo1 {
     color: #DD2424;
@@ -31,13 +32,16 @@ body{
 }
 
 
-nav{
+.navbar{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
 background-color: #FFFF;
+flex-wrap: wrap;
+
 }
+
 nav a {
     text-decoration: none;
 }
@@ -45,7 +49,7 @@ nav a {
 nav ul{
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 10px;
     padding: 0;
     margin: 0;
 }
@@ -54,6 +58,7 @@ nav ul a {
     color: black;
     font-weight: 300;
 }
+
 
 
 .login{
@@ -134,32 +139,7 @@ nav ul a {
     color: white;
 }
 
-.service_offer{
-    padding: 0px;
-    background-color: white;
 
-}
-.myservice{
-    text-align: center;
-    color: red;
-
-}
-p{
-    text-align: center;
-    color: #000;
-}
-.service-list{
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-
-}
-.service {
-    flex: 1 1 25%;
-    height: 150x;
-    background-color:rgb(221, 174, 174);
-    border-radius: 10px;
-}
 
 .copy_right{
     background-color:#bb2c2c;
@@ -206,8 +186,10 @@ text-align: center;
     font-size: 1.5rem;
 }
 .container img{
-    width: 700px;
-    margin-right: 30px;
+    
+     width: 99%;
+    height: auto;
+    border-radius: 8px;
 }
 .container .text{
     max-width: 400px;
@@ -229,4 +211,10 @@ text-align: center;
     width: 50px;
     height: 50px;
     border-radius: 50px;
+}
+.copy_right{
+    background-color:#bb2c2c;
+    text-align: center;
+    padding: 1px;
+    color: white;
 }

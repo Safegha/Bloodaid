@@ -16,16 +16,16 @@
         </div>
 <!--navbar-->
 <nav>
+    <div class="navbar">
          <img src="images/logo2.png" alt="" class="logo-image" width="50" height="50">
 
     <a href="#"><span class="logo1">BLOOD</span> <SPAN class="logo2">AID</SPAN></a>
     
     
-    <ul>
+    <ul class="nav-links">
         <li class="nav_list"><a href="home.php">Home</a></li><br>
         <li class="nav_list "><a href="about.php">About us</a></li><br>
         <li class="nav_list "><a href="request.php">Request blood</a></li><br>
-    </ul>
 
     <div class="register-dropdown">
     <button class="register-btn">Register Now &#9662;</button>
@@ -38,8 +38,11 @@
     
     <div class="login">
         <a href="login.php">login</a>
+    
 
     </div>
+    </div>
+    </ul>
 </nav>
 <!--Banner-->
 <div class="banner">
@@ -50,14 +53,14 @@
          supporting both personal needs and medical demand.</p>
 </div>
 <div class="book">
-    <button ><a href="appiontment.php">BOOK AN APPOINMENT</a></button>
+    <a href="appiontment.php" class="books">BOOK AN APPOINMENT</a>
 </div>
 </div>
     </header>
     <main>
          <!--services-->
          <section>
-            <div>
+            <div class="Services">
          <div class="service_offers">
             <h2 class="myservice">DONATION PROCESS</h2>
             <p>The donation process from the time you arrive center untill the time ou live.</p>
@@ -94,5 +97,12 @@
         <p> &copy copyright,2025;<span class="logo1">BLOOD</span> <SPAN class="logo2">AID</span></span>.</p>
          </div>
     </footer>
+              
+
+
+
+
+
+
 </body>
 </html>

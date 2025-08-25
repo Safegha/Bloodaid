@@ -44,20 +44,11 @@ $sql= "INSERT INTO appointment(Donor_id,Prefferred_Time,Prefferred_Date,Location
   <div class="container">
     <h2>Book Your Appointment Here</h2>
     <form action="appointment.php" method="POST">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required="">
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required="">
-
+     
       <label for="phone">Phone Number</label>
       <input type="tel" id="phone" name="phone_number" required="">
 
-      <label for="service">Select Service</label>
-      <select id="service" name="service" required="">
-        <option value="">-- Choose a Service --</option>
-        <option value="Blood Donor">Blood Donor</option>
-        <option value="Blood Receiver">Blood Receiver</option>
+     
       </select>
 
       <label for="date">Preferred Date</label>

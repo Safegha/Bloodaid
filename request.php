@@ -6,8 +6,7 @@ session_start();
 require 'db.php';
 if (!isset($_SESSION['user_id'])) {
   echo "<script>alert('Please kindly register and log in first before you can access this page.');</script>";
-  // You can also use header to redirect to the login page
-  // header('Location: login.php');
+  
   exit();
 }
 
@@ -52,18 +51,16 @@ $sql= "INSERT INTO bloodrequest(Recipient_id,Bloodrequest_bloodtype,Request_date
         </div>
 <!--navbar-->
 <nav>
-             <img src="images/logo2.png" alt="" class="logo-image" width="50" height="50">
+    <div class="navbar">
+         <img src="images/logo2.png" alt="" class="logo-image" width="50" height="50">
 
     <a href="#"><span class="logo1">BLOOD</span> <SPAN class="logo2">AID</SPAN></a>
     
     
-    <ul>
+    <ul class="nav-links">
         <li class="nav_list"><a href="home.php">Home</a></li><br>
         <li class="nav_list "><a href="about.php">About us</a></li><br>
         <li class="nav_list "><a href="request.php">Request blood</a></li><br>
-                  <li class="nav_list"><a href="logout.php">logout</a></li>
-
-    </ul>
 
     <div class="register-dropdown">
     <button class="register-btn">Register Now &#9662;</button>
@@ -76,8 +73,11 @@ $sql= "INSERT INTO bloodrequest(Recipient_id,Bloodrequest_bloodtype,Request_date
     
     <div class="login">
         <a href="login.php">login</a>
+    
 
     </div>
+    </div>
+    </ul>
 </nav>
 
 

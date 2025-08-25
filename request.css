@@ -1,26 +1,24 @@
-body{
-    padding: 0;
-    background-color:  rgb(221, 174, 174);
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-    
-    
-}
 body, header, main, footer {
  padding: 0;
  margin: 0;
  box-sizing: border-box;
- 
+ font-size: larger;
+        background-color: rgb(221, 174, 174);
+
 }
 .Welcome{
     padding: 1px;
     background-color: #bb2c2c;
     text-align: left;
-    align-items: center;
-
+    align-items: flex-start;
 }
-
+ @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
 
 .logo1 {
     color: #DD2424;
@@ -34,13 +32,16 @@ body, header, main, footer {
 }
 
 
-nav{
+.navbar{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
 background-color: #FFFF;
+flex-wrap: wrap;
+
 }
+
 nav a {
     text-decoration: none;
 }
@@ -48,7 +49,7 @@ nav a {
 nav ul{
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 10px;
     padding: 0;
     margin: 0;
 }
@@ -57,6 +58,7 @@ nav ul a {
     color: black;
     font-weight: 300;
 }
+
 
 
 .login{

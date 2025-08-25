@@ -11,22 +11,21 @@
   
 
 <header>
-        <div class="Welcome">
-            <p>Welcome to our Bloodaid site</p>
+             <div class="Welcome">
+            <p style="color: white;">Welcome to our Bloodaid site</p>
         </div>
 <!--navbar-->
 <nav>
-             <img src="images/logo2.png" alt="" class="logo-image" width="50" height="50">
+    <div class="navbar">
+         <img src="images/logo2.png" alt="" class="logo-image" width="50" height="50">
 
     <a href="#"><span class="logo1">BLOOD</span> <SPAN class="logo2">AID</SPAN></a>
     
     
-    <ul>
+    <ul class="nav-links">
         <li class="nav_list"><a href="home.php">Home</a></li><br>
         <li class="nav_list "><a href="about.php">About us</a></li><br>
-        <li class="nav_list "><a href="Request.php">Request blood</a></li><br>
-       
-    </ul>
+        <li class="nav_list "><a href="request.php">Request blood</a></li><br>
 
     <div class="register-dropdown">
     <button class="register-btn">Register Now &#9662;</button>
@@ -39,8 +38,11 @@
     
     <div class="login">
         <a href="login.php">login</a>
+    
 
     </div>
+    </div>
+    </ul>
 </nav>
 <h2>Medical Blood Recipient Consent Form</h2>
   <form action="recipientinsert.php" method="POST">
@@ -84,9 +86,12 @@
   </form>
 
   <!-- FOOTER -->
-  <footer>
-    &copy; 2025 BLOODAID | Contact: bloodaid@gmail.com | +237 654445520
-  </footer>
+   <footer>
+         <div class="copy_right">
+        <p> &copy copyright,2025;<span class="logo1">BLOOD</span> <SPAN class="logo2">AID</span></span>.</p>
+         </div>
+    </footer>
+
 
    
 
