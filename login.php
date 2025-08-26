@@ -21,7 +21,7 @@ $_SESSION['user_id'] =$row['Recipient_id'];
     header("Location: request.php");
     exit();
 }else{
-      echo "invalid";
+      echo "INVALID";
 
  }
 

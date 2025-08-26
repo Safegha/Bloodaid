@@ -16,7 +16,7 @@ $bloodtype=$_POST['recipient_bloodtype'];
 $sql="INSERT INTO recipient(Recipient_id, Recipient_fullname, Recipient_gender,Recipient_pwd,Recipient_bloodtype, Recipient_email ,Recipient_contact,Date_of_birth)VALUES('$id', '$fullname', '$gender', '$password','$bloodtype', '$email' ,'$contact','$date_of_birth')";
 
 if($conn->query($sql)===TRUE){
-    echo"successesssssssss!";
+    echo"REGISTRATION WAS SUCCESSFULL";
 }else{
     echo"failed: " . $conn->error;
 }
