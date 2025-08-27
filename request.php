@@ -61,6 +61,8 @@ $sql= "INSERT INTO bloodrequest(Recipient_id,Bloodrequest_bloodtype,Request_date
         <li class="nav_list"><a href="home.php">Home</a></li><br>
         <li class="nav_list "><a href="about.php">About us</a></li><br>
         <li class="nav_list "><a href="request.php">Request blood</a></li><br>
+                <li class="nav_list "><a href="logout.php">logout</a></li><br>
+
 
     <div class="register-dropdown">
     <button class="register-btn">Register Now &#9662;</button>
