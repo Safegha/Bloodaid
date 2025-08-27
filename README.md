@@ -1,6 +1,6 @@
 * BloodAid *
 
-BloodAid is a blood management system that helps to manage blood donations efficiently by connecting the donr and recipient
+BloodAid is a blood management system that helps to manage blood donations efficiently by connecting the donor and recipient
 It provides a platform where donors and recipients can register, request blood, and manage appointments easily.  
 
  Features
@@ -62,5 +62,5 @@ Pages Overview/Usage
 -Nde Olivier Borel /page responsiveness.
 -Tsapi Tiomela Othniel Pavel /Recipient page.
 -Tchakounte Rooney /login.
-
+-Sokamte Takam Victor /Book appoinment.
 
